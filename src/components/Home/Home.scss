@@ -1,0 +1,96 @@
+@import "variables";
+@import "mixins";
+@import "./node_modules/scss-spinners/spinners";
+
+.container {
+  img {
+    @include widthHeightBorderRadius(180px, none, none, 50%);
+    margin-top: 30px;
+  }
+  h2 {
+    margin-left: 35px;
+  }
+}
+.userContainer {
+  @include flex(none, center, none, none);
+  flex-direction: column;
+
+  .name {
+    font-size: x-large;
+  }
+  .login {
+    font-size: larger;
+  }
+}
+
+.infoContainer {
+  width: 50%;
+  margin: 10px auto;
+  @include flex(space-evenly, center, none, none);
+
+  span {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+}
+
+.infoHolder {
+  display: flex;
+  svg {
+    color: $SVGColor;
+  }
+}
+
+.reposContainer {
+  @include widthHeightBorderRadius(900px, none, 1px solid none, none);
+  min-height: 500px;
+  margin: 20px auto;
+  @include flex(center, none, none, wrap);
+
+  .repo {
+    @include widthHeightBorderRadius(
+      300px,
+      80px,
+      1px solid $border2Color,
+      10px
+    );
+    margin: 10px;
+
+    .repoName {
+      @include flex(space-between, none, none, none);
+
+      a,
+      p {
+        font-size: large;
+        text-decoration: none;
+        color: $textColor;
+      }
+
+      span {
+        @include widthHeightBorderRadius(
+          none,
+          none,
+          1px solid $border2Color,
+          15px
+        );
+        padding: 1px 4px;
+        font-size: 12px;
+        background-color: white;
+      }
+    }
+  }
+}
+.repoName,
+.repoLanguage,
+.repoForks,
+.repoStars {
+  @include flex(none, center, none, none);
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.spiner,
+.round {
+  @include flex(center, center, none, none);
+  margin: 100px auto;
+}

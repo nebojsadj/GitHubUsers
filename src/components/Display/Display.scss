@@ -1,0 +1,28 @@
+@import "variables";
+@import "mixins";
+
+.display {
+  @include widthHeightBorderRadius(25%, 95px, 1px solid $border2Color, 10px);
+  margin: 20px auto;
+  box-shadow: 0 0 4px $border1Color;
+  button {
+    font-size: 12px;
+    padding: 2px 4px;
+    background-color: $buttonColor;
+    color: white;
+    border-radius: 2em;
+    cursor: pointer;
+  }
+}
+.avatar {
+  @include flex(space-between, center, none, none);
+  padding: 0.5em;
+  img {
+    @include widthHeightBorderRadius(50px, 50px, 1px solid $border1Color, 50%);
+  }
+}
+.login {
+  padding-left: 0.5em;
+  font-size: larger;
+  color: $textColor;
+}

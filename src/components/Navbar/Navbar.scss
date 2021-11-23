@@ -1,0 +1,44 @@
+@import "variables";
+@import "mixins";
+
+.nav {
+  background: $navColorBg;
+  height: 80px;
+  @include flex(center, center, none, none);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  .navBrand {
+    color: white;
+    text-decoration: none;
+    font-size: xx-large;
+    line-height: 80px;
+  }
+}
+.navContainer {
+  @include flex(space-between, none, none, none);
+  @include widthHeightBorderRadius(100%, 80px, none, none);
+  padding: 0 24px;
+  max-width: 1800px;
+  z-index: 1;
+}
+.navMenu {
+  @include flex(none, center, none, none);
+  list-style: none;
+  text-align: center;
+  & .active {
+    border-bottom: 1px solid $navColor;
+    padding-bottom: 3px;
+  }
+}
+
+.navItem {
+  width: 100px;
+}
+
+.link {
+  color: $navColor;
+  cursor: pointer;
+  font-size: x-large;
+  text-decoration: none;
+}

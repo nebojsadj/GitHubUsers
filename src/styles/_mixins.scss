@@ -1,0 +1,14 @@
+@mixin flex($content, $align, $direction, $wrap) {
+  display: flex;
+  justify-content: $content;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin widthHeightBorderRadius($width, $height, $border, $radius) {
+  width: $width;
+  height: $height;
+  border: $border;
+  border-radius: $radius;
+}

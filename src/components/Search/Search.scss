@@ -1,0 +1,48 @@
+@import "variables";
+@import "mixins";
+@import "./node_modules/scss-spinners/spinners";
+
+.searchContainer {
+  @include flex(center, none, none, wrap);
+}
+
+.searchHolder {
+  @include flex(center, center, none, none);
+  width: 100%;
+  margin-bottom: 10px;
+
+  input {
+    @include widthHeightBorderRadius(25%, 35px, 0, none);
+    border-bottom: 2px solid $border2Color;
+    font-size: larger;
+  }
+
+  input:focus {
+    outline: none;
+    border-bottom: 2px solid $border1Color;
+  }
+
+  button {
+    border: none;
+    border-radius: 50%;
+    svg {
+      @include widthHeightBorderRadius(40px, 40px, none, none);
+      cursor: pointer;
+    }
+  }
+}
+
+.gitHubIcon {
+  @include widthHeightBorderRadius(150px, 150px, none, none);
+  margin: 30px auto;
+}
+
+.displayContainer {
+  margin: 30px auto;
+}
+
+.spiner,
+.round {
+  @include flex(center, center, none, none);
+  margin: 100px auto;
+}
